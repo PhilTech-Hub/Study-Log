@@ -1,0 +1,71 @@
+{% load static %}
+{% load bootstrap4 %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Study Log</title>
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+</head>
+
+<body>
+    <nav class="nav-bg navbar navbar-expand-md navbar-light c-white mb-4 border ">
+        <a class="navbar-brand" href="{% url 'learning_logs:index'%}">
+            Learning Log</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCol lapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'learning_logs:topics'%}">
+                        Topics</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a href="{% url 'learning_logs:profile' %}">
+                        <div class="nav-profile-container">
+                            <img src="{% if user.profile.image %}{{ user.profile.image.url }}{% else %}{% static 'profile_images/default.png' %}{% endif %}"
+                                alt="Profile Image" class="nav-profile-image"><br>
+                        </div>
+                    </a> <!-- Add the link here -->
+
+                </li>
+
+                <li class="nav-btn c-white">
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit"> | Logout</button>
+                    </form>
+                </li>
+
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'users:register' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'users:login' %}">Log in</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    <main role="main" class="container">
+        <div class="pb-2 mb-2 border-bottom">
+            {% block page_header %}{% endblock page_header %}
+        </div>
+        <div>
+            {% block content %}{% endblock content %}
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{% extends "learning_logs/base.html" %}
+{% block page_header %}
+<div class="hm-d1 rc-4 bg-shade1">
+    <h1 class="std-log txt-c">Study Log</h1>
+    <h1 class="display-5 ">Track your learning.</h1>
+    <p class="lead">Make your own Learning Log, and keep a list of the
+        topics you're learning about. Whenever you learn something new
+        about a topic, make an entry summarizing what you've learned.</p>
+    <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}" role="button">Register &raquo;</a>
+</div>
+
+{% endblock page_header %}

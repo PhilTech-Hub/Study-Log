@@ -1,0 +1,150 @@
+/* static/myapp/css/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/background1.jpg');
+    background-size: cover; /* Cover the entire screen */
+    background-position: center bottom ; /* Positions the background at the top center */
+    background-attachment: fixed; /* Keep the background fixed during scrolling */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    height: fit-content;
+}
+
+/* CSS for Universal usage */
+.bg-shade1{
+    background-color: rgba(102, 95, 199, 0.7);
+}
+.rc-4{
+    border-radius: 20px;
+}
+.c-white{
+    color: white;
+}
+.txt-c{
+    text-align: center;
+}
+
+
+
+/* CSS for Nav Bar */
+.nav-bg{
+    background-color: rgb(131, 125, 219);
+}
+
+.nav-btn{
+    position: relative;
+    bottom: 10%;
+    left: 10%;
+    border: none;
+    background: transparent;
+
+}
+.nav-profile-container {
+    width: 50px;          /* Set the desired width */
+    height: 50px;         /* Set the desired height */
+    overflow: hidden;      /* Hide the overflow */
+    border-radius: 50%;    /* Make it circular */
+    border: 5px solid rgb(217, 216, 236); /* Border color and thickness */
+    display: flex;         /* Center the image */
+    align-items: center;   /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.nav-profile-image {
+    width: 100%;          /* Fill the container */
+    height: auto;         /* Maintain aspect ratio */
+    border-radius: 50%;   /* Make the image circular */
+}
+
+/* CSS for Landing Page */
+.std-log{
+    font-size: 4rem;
+    margin-bottom: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* CSS for Base */
+.hm-d1{
+    position: absolute;
+    top: 30%;
+    left: 27%;
+    width: 50%;
+    height: fit-content;
+    padding: 2.5%;
+    color: aliceblue;
+}
+
+
+/* #CSS for Profile */
+.profile-container {
+    width: 100px;          /* Set the desired width */
+    height: 100px;         /* Set the desired height */
+    overflow: hidden;      /* Hide the overflow */
+    border-radius: 50%;    /* Make it circular */
+    border: 5px solid rgb(118, 111, 223); /* Border color and thickness */
+    display: flex;         /* Center the image */
+    align-items: center;   /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.profile-image {
+    width: 100%;          /* Fill the container */
+    height: auto;         /* Maintain aspect ratio */
+    border-radius: 50%;   /* Make the image circular */
+}
+
+.update-profile-container {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    width: 50%;
+    height: fit-content;
+    padding: 2.5%;
+    color: aliceblue;
+    border: 5px solid rgb(118, 111, 223); /* Border color and thickness */
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.update-profile-container .update-profile-image-container {
+    width: 100px;  /* Adjust the size as needed */
+    height: 100px; /* Make the container square to create a circular effect */
+    border-radius: 50%; /* Makes the container circular */
+    overflow: hidden; /* Ensures the image stays within the circle */
+    display: flex;
+    border: 5px solid rgb(118, 111, 223); /* Border color and thickness */
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; /* Optional: A background color for empty space */
+    margin: 0 auto; /* Centers the container horizontally */
+  }
+  
+  .update-profile-container .update-profile-image-container .profile-image {
+    width: 100%; /* Ensures the image fills the container */
+    height: auto; /* Maintains aspect ratio */
+  }
+  
+  .form-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows fields to wrap to the next line if the screen is small */
+    gap: 20px; /* Adds space between form groups */
+    justify-content: center; /* Centers the form within the container */
+    max-width: 500px; /* Sets a maximum width for the form */
+    margin: 0 auto; /* Centers the form container within its parent */
+  }
+  
+  .form-group {
+    flex: 1 1 200px; /* Adjusts the width of each form group (200px is the minimum width) */
+    max-width: 350px; /* Sets a maximum width for each form group */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px; /* Adds space below labels */
+  }
+  
+
+  
